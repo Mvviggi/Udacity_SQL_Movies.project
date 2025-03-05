@@ -41,7 +41,7 @@ GROUP BY
   Category_name;
 ```
   
-**Question 2 **- query for slide 2*/
+**Question 2** - query for slide 2*/
 
 ```
 SELECT 
