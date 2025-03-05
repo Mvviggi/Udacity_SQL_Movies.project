@@ -10,8 +10,9 @@ Questions-
 3. What is the range of paying customers per store?
 4. Find the total rentals by month for 2005 for each store.
 
-/*Question 1 - query shown in graph for slide 1*/
+**Question 1** - query shown in graph for slide 1*/
 
+```
 SELECT 
   Category_name, 
   SUM(count_rentals) total_category 
@@ -38,10 +39,11 @@ FROM
   ) t1 
 GROUP BY 
   Category_name;
-
+```
   
-/*Question 2- query for slide 2*/
+**Question 2 **- query for slide 2*/
 
+```
 SELECT 
   Category_name, 
   standard_quartile, 
@@ -72,11 +74,12 @@ GROUP BY
 ORDER BY 
   1, 
   2;
+```
+
+**Question 3** - query for slide 3*/ 
 
 
-/*Question 3: query for slide 3*/ 
-
-
+```
 SELECT 
   COUNT(t2.customer_level), 
   t2.store_id, 
@@ -114,11 +117,11 @@ FROM
 GROUP BY 
   t2.customer_level, 
   t2.store_id;
+```
 
+**Question 4** - query for slide 4*/
 
-/*Question 4:query for slide 4*/
-
-
+```
 SELECT 
   i.store_id, 
   DATE_PART ('year', r.rental_date) AS rental_year, 
@@ -135,7 +138,7 @@ GROUP BY
   DATE_PART ('month', r.rental_date) 
 ORDER BY 
   4 DESC;
-
+```
 
 
 
